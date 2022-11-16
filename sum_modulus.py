@@ -7,7 +7,7 @@
 def main():
 
     try:
-        num_user = int(input("What is the range from 0?: "))
+        max_num_Range = int(input("What is the range from 0?: "))
         new_int = 0
         loop_count = 0
 
@@ -16,7 +16,7 @@ def main():
             old_int = 0
             # This section retrieves all the number from 0-user wished number
             # That is divisible by 3 or 5 and adds it
-            for i in range(0, num_user, 1):
+            for i in range(0, max_num_Range, 1):
                 if (i % 3 == 0) or (i % 5 == 0):
                     new_int += i
                     print(f"{i}+{old_int} = {new_int}")
@@ -24,7 +24,7 @@ def main():
                     old_int = new_int
 
             # The program breaks and goes on forever if the break number is not odd.
-            if i == (num_user - 1):
+            if i == (max_num_Range - 1):
                 break
     except:
         print(f"Your input is not a number. (e.g 50)")
